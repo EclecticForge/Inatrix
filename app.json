@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Combinatorix",
-    "slug": "Combinatorix",
+    "name": "Combinatrix",
+    "slug": "Combinatrix",
     "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "combinatorix",
+    "scheme": "combinatrix",
     "userInterfaceStyle": "automatic",
     "android": {
       "adaptiveIcon": {
@@ -14,7 +14,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.Combinatorix"
     },
     "web": {
       "output": "static",
@@ -25,9 +26,9 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208080F",
+          "backgroundColor": "#208080",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 50
         }
       ]
     ],
