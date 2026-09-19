@@ -1,17 +1,18 @@
 import { useAudioPlayer } from "expo-audio";
+import { useWindowDimensions } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import AssetManager from "../app/assetmanager";
-import '../app/styles.css';
+import { styles } from "./styles";
 
 function test(assets: AssetManager) {
 
   let number1: number = Math.floor(Math.random()*7+1);
   let number2: number = Math.floor(Math.random()*7+1);
-  return (
-  <div className="item">
-    <img src={assets[0][7][number1]} className="cell"/>
-    <img src={assets[0][0][number2]} className="cell"/>
-  </div> 
-  );
+  return
+ // <View className="item">
+ //   <Image source={assets[0][7][number1]}/>
+ //   <Image source={assets[0][0][number2]}/>
+ // </View> 
 }
   
 
@@ -27,48 +28,16 @@ export default function Index() {
   const effectplayer = useAudioPlayer();
   effectplayer.volume = 1;
 
+  const {width, height} = useWindowDimensions();
+  const size = Math.min(width,height)*0.91;
 
   return (
-    <div className = "page">
-      <div className = "grider">
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        {test(assets)}
-        </div>
-    </div>
-
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.page}>
+        <SafeAreaView style={{ width: size, height: size }}>
+          
+        </SafeAreaView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
