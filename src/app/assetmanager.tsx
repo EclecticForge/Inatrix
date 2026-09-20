@@ -9,7 +9,7 @@ export enum imageMode {
 }
 
 export enum selection {
-    Zero,
+    Special,
     One,
     Two,
     Three,
@@ -17,7 +17,6 @@ export enum selection {
     Five,
     Six,
     Seven,
-    Special
 }
 
 export enum sound {
@@ -59,6 +58,4 @@ export default class AssetManager {
         this[assetMode.Sound][sound.Effect2] = require("../../assets/sounds/Effect1.mp3");
         this[assetMode.Sound][sound.Effect3] = require("../../assets/sounds/Effect2.mp3");
     }
-
-
 }
